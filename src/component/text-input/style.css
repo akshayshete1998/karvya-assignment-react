@@ -1,0 +1,18 @@
+.textInputWrapper{
+    display: flex;
+}
+.textWidth{
+    width: 50%;
+}
+.textWidth input{
+    width: 50%;
+}
+.inputAndError{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.errorStrings{
+    display: flex;
+    flex-direction: column;
+}
