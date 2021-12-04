@@ -20,7 +20,7 @@ export const UploadFile = (props) => {
     }, [image, preview])
     const fileHandler = (event) => {
         let file = event.target.files[0]
-        if (file && (file.type == "image/png" || file.type == "image/jpg")) {
+        if (file && (file.type === "image/png" || file.type === "image/jpg")) {
             const fileSize = file.size / 1024 / 1024
             if (fileSize <= 4) {
                 setImage(file)
