@@ -24,14 +24,15 @@ export const UploadFile = (props) => {
             const fileSize = file.size / 1024 / 1024
             if (fileSize <= 4) {
                 setImage(file)
-            }else{
+            } else {
                 alert(
                     "File too Big, please select a file less than 4mb")
             }
 
         } else {
-            alert('Please Select Png and Jpg Img Type')
+            alert('Please select png or jpg img type')
             file = null
+            // fileInputRef. = ''
             setImage(null)
         }
     }
@@ -41,7 +42,10 @@ export const UploadFile = (props) => {
         <div>
             <span>Upload Image</span>
             {/* <img src={preview}/> */}
-            <input type="file" name="file" ref={fileInputRef} accept="image/*" onChange={(event) => fileHandler(event)} />
+            <button type="button" onClick={() => {
+                fileInputRef.current.click()
+            }}>Upload Img</button>
+            <input type="file" name="file" ref={fileInputRef} style={{ display: "none" }} accept="image/*" onChange={(event) => fileHandler(event)} />
 
         </div>
     )

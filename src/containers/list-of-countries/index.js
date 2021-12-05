@@ -57,7 +57,7 @@ export const ListOfCountry = () => {
                     {data.map((value) => (
                         selectedDropDownValue === value.name ?
                             (
-                                <div className="detailsWrapper" key={value.name}>
+                                <div className="detailsWrapper" key={value.rank + 100}>
                                     <span className="countryName">Name:{value.name}</span>
                                     <img src={value.flag} alt=""/>
                                     <span className="countryName">Rank:{value.rank}</span>
