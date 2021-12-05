@@ -62,7 +62,7 @@ export const ListOfCountry = () => {
                                     <img src={value.flag} alt=""/>
                                     <span className="countryName">Rank:{value.rank}</span>
                                 </div>
-                            ) : ""
+                            ) : null
                     ))
                     }
                 </div>
